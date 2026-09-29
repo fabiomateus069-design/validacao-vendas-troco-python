@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Família Santos Comercial"
+description = "Uma calculadora web simples para validar pagamentos de vendas e calcular troco ou o valor restante, sem depender do terminal."
+version = "1.0.0"
+id = "artifacts/familia-santos-comercial"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21069
+
+[services.development]
+run = "pnpm --filter @workspace/familia-santos-comercial run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/familia-santos-comercial", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/familia-santos-comercial/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21069"
+BASE_PATH = "/"
