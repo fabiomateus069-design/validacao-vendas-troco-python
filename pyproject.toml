@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "validacao-vendas-troco"
+version = "1.0.0"
+description = "Script em Python para automação comercial: validação de pagamentos em caixa, cálculo automático de troco e alertas de saldo devedor."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Fabio Mateus", email = "fabiomateus069@example.com"}
+]
+keywords = [
+    "validação",
+    "pagamento",
+    "troco",
+    "caixa",
+    "comercial",
+    "automação",
+    "ponto de venda",
+    "pos"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Office/Business :: Financial :: Point-Of-Sale",
+]
+
+[project.urls]
+Homepage = "https://github.com/fabiomateus069-design/validacao-vendas-troco-python"
+Repository = "https://github.com/fabiomateus069-design/validacao-vendas-troco-python"
+"Bug Tracker" = "https://github.com/fabiomateus069-design/validacao-vendas-troco-python/issues"
+
+[tool.setuptools]
+packages = ["validacao_vendas_troco"]
